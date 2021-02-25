@@ -11,12 +11,9 @@ class App extends Component {
       <div>
         {this.state.tareas.map(function (e) {
           return (
-            <Fragment>
-              <h1>{e.title}</h1>
-              <p>
-                {e.id} - {e.title} - {e.description} - {e.done}
-              </p>
-            </Fragment>
+            <p key={e.id}>
+              {e.id} - {e.title} - {e.description} - {e.done}
+            </p>
           );
         })}
       </div>
